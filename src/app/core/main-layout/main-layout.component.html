@@ -1,0 +1,19 @@
+<nz-layout class="container" *ngIf="auth.isAuthenticated(); else loginPage">
+  <nav class="main-nav">
+    <ul  class="main-nav-list">
+      <li>
+        <img src="LA_LOGO.png" alt="Logo">
+      </li>
+      <li class="main-nav-item">Форум</li>
+      <li class="main-nav-item">Новости</li>
+      <li class="main-nav-item">Киберспорт</li>
+      <li class="main-nav-item">База знаний</li>
+      <li class="main-nav-item">Видео</li>
+      <li class="main-nav-item">Мемы</li>
+    </ul>
+  </nav>
+</nz-layout>
+
+<ng-template #loginPage>
+  <app-login-page></app-login-page>
+</ng-template>

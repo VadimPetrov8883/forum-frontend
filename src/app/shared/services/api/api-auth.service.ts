@@ -15,10 +15,14 @@ export class ApiAuthService {
   ) { }
 
   getCookie(): Observable<any> {
-    return this.http.get(`${environment.backendUrl}sanctum/csrf-cookie`, {withCredentials: true})
+    return this.http.get(`${environment.backendUrl}sanctum/csrf-cookie`)
   }
 
   login(user: User): Observable<any> {
-    return this.http.post<User>(`${environment.backendUrl}api/login`, user, {withCredentials: true})
+    return this.http.post<User>(`${environment.backendUrl}auth/login`, user)
+  }
+
+  logout() {
+
   }
 }
